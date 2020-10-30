@@ -5,7 +5,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
@@ -15,24 +14,28 @@ public class MyDraw extends View {
 	public MyDraw(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		makeSky();
+		creatRockets();
+
 	}
 
 	Paint paint = new Paint();
 	Bitmap rocketImage = BitmapFactory.decodeResource(getResources(), R.drawable.rocket);
-	
-	
-	float xRocket = 300, yRocket = 300;
-	float vxRocket = 0.5f, vyRocket = -0.5f;
+
+	int N = 3;
+
+
+	Rocket[] rockets = new Rocket[N];
+
 	
 	@Override
 	protected void onDraw(Canvas canvas) {
 		
 		drawSky(canvas);
 
-		drawRocket(canvas, xRocket, yRocket, vxRocket, vyRocket);
-		
-		xRocket += vxRocket;
-		yRocket += vyRocket;
+		for (int i = 0; i < rockets.length; i++) {
+			rockets[i].draw(canvas);
+			rockets[i].move();
+		}
 		
 		// Запрос на перерисовку экрана
 		invalidate();
@@ -71,16 +74,18 @@ public class MyDraw extends View {
 		   canvas.drawCircle(xStar[i], yStar[i], 3, paint);
 		}   
 	}
-	
-	void drawRocket(Canvas canvas, float x, float y, float vx, float vy)
-	{
-		Matrix matrix = new Matrix();
-		matrix.setScale(0.2f, 0.2f);
-		//Study mathematics, dear young programmer :)  
-		matrix.postRotate((float)Math.toDegrees(Math.atan2(vy, vx)) + 45);
-		matrix.postTranslate(x, y);
-		paint.setAlpha(255);
-		canvas.drawBitmap(rocketImage, matrix, paint);
+
+	void creatRockets() {
+
+		float[] xRocket = {300, 300, 300};
+		float[] yRocket = {300, 300, 500};
+		float[] vxRocket = {0.5f, -0.5f, 0.5f};
+		float[] vyRocket = {-0.5f, 0.5f, -0.5f};
+
+		for (int i = 0; i < rockets.length; i++) {
+			Rocket rocket = new Rocket(xRocket[i], yRocket[i], vxRocket[i], vyRocket[i], rocketImage, paint);
+			rockets[i] = rocket;
+		}
 	}
 	
 }
