@@ -21,6 +21,7 @@ public class MyDraw extends View {
 	Paint paint = new Paint();
 	Bitmap rocketImage = BitmapFactory.decodeResource(getResources(), R.drawable.rocket);
 
+	// size array
 	int N = 3;
 
 	// create array of objects
