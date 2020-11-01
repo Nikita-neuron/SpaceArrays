@@ -23,7 +23,7 @@ public class MyDraw extends View {
 
 	int N = 3;
 
-
+	// create array of objects
 	Rocket[] rockets = new Rocket[N];
 
 	
