@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpaceArrays.iml" filepath="$PROJECT_DIR$/.idea/modules/SpaceArrays.iml" group="SpaceArrays" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="SpaceArrays/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpaceArrays.iml" filepath="$PROJECT_DIR$/.idea/modules/SpaceArrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SpaceArrays.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SpaceArrays.app.iml" />
     </modules>
   </component>
 </project>

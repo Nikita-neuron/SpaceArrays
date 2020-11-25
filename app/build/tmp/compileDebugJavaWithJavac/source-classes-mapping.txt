@@ -1,0 +1,16 @@
+ru/samsung/itschool/spacearrays/MainActivity.java
+ ru.samsung.itschool.spacearrays.MainActivity
+ru/samsung/itschool/spacearrays/BuildConfig.java
+ ru.samsung.itschool.spacearrays.BuildConfig
+ru/samsung/itschool/spacearrays/Sky.java
+ ru.samsung.itschool.spacearrays.Sky
+ru/samsung/itschool/spacearrays/SpaceObjects.java
+ ru.samsung.itschool.spacearrays.SpaceObjects
+ru/samsung/itschool/spacearrays/SpaceObject.java
+ ru.samsung.itschool.spacearrays.SpaceObject
+ru/samsung/itschool/spacearrays/Planet.java
+ ru.samsung.itschool.spacearrays.Planet
+ru/samsung/itschool/spacearrays/Rocket.java
+ ru.samsung.itschool.spacearrays.Rocket
+ru/samsung/itschool/spacearrays/MyDraw.java
+ ru.samsung.itschool.spacearrays.MyDraw

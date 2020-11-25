@@ -1,33 +1,25 @@
 package ru.samsung.itschool.spacearrays;
 
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
-import android.graphics.Paint;
-import android.util.AttributeSet;
 
-public class Rocket {
+public class Rocket extends SpaceObject implements SpaceObjects{
 
-    float x, y, vx, vy;
-    Bitmap image;
-    Paint paint;
+    float vx, vy;
 
-    Rocket(float x, float y, float vx, float vy, Bitmap image, Paint paint) {
-        this.x = x;
-        this.y = y;
+    public Rocket(float x, float y, float vx, float vy, Bitmap image) {
+        super(x, y, image);
         this.vx = vx;
         this.vy = vy;
-        this.image = image;
-        this.paint = paint;
     }
 
-    void move() {
+    public void move() {
         x += vx;
         y += vy;
     }
 
-    void draw(Canvas canvas)
+    public void draw(Canvas canvas)
     {
         Matrix matrix = new Matrix();
         matrix.setScale(0.2f, 0.2f);
